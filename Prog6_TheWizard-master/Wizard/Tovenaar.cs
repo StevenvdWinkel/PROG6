@@ -17,7 +17,6 @@ namespace Wizard
         {
             this._kookpot = new Kookpot("zwart");
             this._staf = pStaf;
-
         }
 
     
