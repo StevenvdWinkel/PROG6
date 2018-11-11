@@ -1,0 +1,11 @@
+﻿<Application x:Class="MyBlogStarter.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ioc="clr-namespace:MyBlogStarter.ViewModels"
+             StartupUri="MainWindow.xaml">
+    
+    <!-- Dit is de plek waar de serviceLocator beschikbaar word gesteld voor alle views-->
+    <Application.Resources>
+        <ioc:NinjectServiceLocator x:Key="ServiceLocator" />
+    </Application.Resources>
+</Application>
