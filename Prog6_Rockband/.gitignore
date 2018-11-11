@@ -1,0 +1,15 @@
+/node_modules/
+TestResults
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
+/DependencyInjectionStarter/.vs/DependencyInjectionStarter/v15/Server/sqlite3/storage.ide
+/DependencyInjectionStarter/.vs/DependencyInjectionStarter/v15/Server/sqlite3/db.lock
+*.ide-shm
+*.ide-wal
+*.lock
