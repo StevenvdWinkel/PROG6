@@ -28,6 +28,13 @@ namespace MyBlogStarter.ViewModels
                 Author = "Stijn Smulders",
                 TimeStamp = DateTime.Now
             });
+
+            Blogs.Add(new BlogVM()
+            {
+                Title = "A Dog Tutorial",
+                Author = "Steven van de Winkel",
+                TimeStamp = DateTime.Now
+            });
         }
     }
 }

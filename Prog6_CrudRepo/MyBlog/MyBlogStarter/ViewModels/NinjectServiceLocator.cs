@@ -3,22 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ninject;
 
 namespace MyBlogStarter.ViewModels
 {
     public class NinjectServiceLocator
     {
+        private StandardKernel _kernel;
+
         public NinjectServiceLocator()
         {
-            ///Iets met een kernel?
+            _kernel = new StandardKernel();
+            _kernel.Bind<MainViewModel>().ToSelf().InSingletonScope();
         }
 
         public MainViewModel Main
         {
             get
             {
-                //Dit kan natuurlijk een stuk beter
-                return new MainViewModel();
+                return _kernel.Get<MainViewModel>();
             }
         }
     }
