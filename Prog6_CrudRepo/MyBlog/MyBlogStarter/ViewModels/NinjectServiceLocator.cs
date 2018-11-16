@@ -15,6 +15,7 @@ namespace MyBlogStarter.ViewModels
         {
             _kernel = new StandardKernel();
             _kernel.Bind<MainViewModel>().ToSelf().InSingletonScope();
+            _kernel.Bind<IBlogRepository>().To<DummyBlogRepository>();
         }
 
         public MainViewModel Main

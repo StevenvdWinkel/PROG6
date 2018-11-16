@@ -11,30 +11,9 @@ namespace MyBlogStarter.ViewModels
     {
         public ObservableCollection<BlogVM> Blogs { get; set; }
 
-        public MainViewModel()
+        public MainViewModel(IBlogRepository blogrepo )
         {
-            Blogs = new ObservableCollection<BlogVM>();
-
-            Blogs.Add(new BlogVM()
-            {
-                Title = "A WPF Tutorial",
-                Author = "Stijn Smulders",
-                TimeStamp = DateTime.Now
-            });
-
-            Blogs.Add(new BlogVM()
-            {
-                Title = "A DI Tutorial",
-                Author = "Stijn Smulders",
-                TimeStamp = DateTime.Now
-            });
-
-            Blogs.Add(new BlogVM()
-            {
-                Title = "A Dog Tutorial",
-                Author = "Steven van de Winkel",
-                TimeStamp = DateTime.Now
-            });
+            this.Blogs = blogrepo.GetAll();
         }
     }
 }

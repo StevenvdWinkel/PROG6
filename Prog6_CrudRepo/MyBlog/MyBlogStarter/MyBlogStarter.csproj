@@ -57,6 +57,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\BlogVM.cs" />
+    <Compile Include="Repositories\DummyBlogRepository.cs" />
+    <Compile Include="ViewModels\IBlogRepository.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\NinjectServiceLocator.cs" />
     <Page Include="MainWindow.xaml">
